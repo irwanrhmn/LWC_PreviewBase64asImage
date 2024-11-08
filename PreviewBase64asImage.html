@@ -1,0 +1,19 @@
+<template>
+    <div class="image-previewer-container" style={containerStyle}>
+        <div class="image-container">
+            <img if:true={currentImage} src={currentImage} class={imageClass} alt="Record Image" />
+            <div if:false={currentImage} class="no-image">No images available</div>
+        </div>
+        <div class="navigation">
+            <button class="left-arrow" onclick={handlePrevious} disabled={disablePrevious}>◀</button>
+            <button class="right-arrow" onclick={handleNext} disabled={disableNext}>▶</button>
+        </div>
+        <button if:true={currentImage} class="download-button" onclick={handleDownload}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+        </button>
+    </div>
+</template>
