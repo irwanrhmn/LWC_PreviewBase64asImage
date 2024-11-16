@@ -1,3 +1,10 @@
+/*
+
+Author : Irwan Rahman Sunarto
+Description : JavaScript file for previewing image file under Salesforce record by reading it from Base64
+
+*/
+
 import { LightningElement, api, track } from 'lwc';
 
 export default class LWC_PreviewBase64asImage extends LightningElement {
